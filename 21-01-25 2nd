@@ -1,0 +1,57 @@
+//Storage classes: auto, static, register, extern
+//EXAMPLE 1
+/*
+#include<stdio.h>
+//declaration
+extern int extern_var;
+
+int main() {
+
+printf("extern variable: %i\n", extern_var);
+
+return 0;
+}
+//define extern variable
+int extern_var =10;
+
+*/
+
+//EXAMPLE 2
+#include<stdio.h>
+//declaration
+extern int extern_var;
+
+void staticExample(){
+    static int static_var=0;
+    static_var++;
+    printf("static %d\n", static_var);
+}
+
+void value_parameter(int x){
+    x++;
+    printf("x=%d\n", x);
+}
+void reference_parameter(int x){
+    x++;
+    printf("x=%d\n", x);
+}
+
+int main() {
+
+int a;
+int *ptr=&a;
+ptr=&a;
+
+printf("extern variable: %i\n", extern_var);
+staticExample();
+staticExample();
+reference_parameter(33);
+*ptr=22;
+reference_parameter(&a);
+reference_parameter(ptr);
+printf("ptr= %d", *ptr);
+
+return 0;
+}
+//define extern variable
+int extern_var =10;
