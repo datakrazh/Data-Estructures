@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main() {
+
+int a=50;
+int* ptr=&a;    //here we are assigning a specific value to the pointer
+//int* ptr=NULL; we can also assign the pointer to nothing and this: "printf("%i\n",*ptr);" would print 0
+
+/*
+& is reference
+"ptr" is containing and will show in memory location 0x7fff0a06b414 in int a = 50
+"*ptr" is containing and will show the value 50 in 0x7fff0a06b414
+
+for proper printing:for integer %i, for character %c, for pointer %p, for decimal %d
+*/
+
+printf("imprimiendo pointer en a: %p\n",&a);
+printf("imprimiendo decimales en a: %d\n",a);
+printf("imprimiendo pointer en ptr: %p\n",ptr);
+printf("imprimiendo integer en *ptr: %i\n",*ptr);
+
+return 0;
+}
